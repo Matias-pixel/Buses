@@ -43,3 +43,34 @@ CREATE TABLE asiento(
     FOREIGN KEY(usuario_id_fk) REFERENCES usuario(id),
     FOREIGN KEY(estado_asiento_id_fk) REFERENCES estadoAsiento(id)
 );
+
+
+
+INSERT INTO estadoUsuario VALUES(null, 'habilitada');
+INSERT INTO estadoUsuario VALUES(null, 'deshabilitada');
+
+INSERT INTO estadoAsiento VALUES(null, 'habilitada');
+INSERT INTO estadoAsiento VALUES(null, 'deshabilitada');
+
+INSERT INTO estadoTipoUsuario VALUES(null, 'habilitada');
+INSERT INTO estadoTipoUsuario VALUES(null, 'deshabilitada');
+
+INSERT INTO tipoUsuario VALUES(null, 'super admin',1);
+INSERT INTO tipoUsuario VALUES(null, 'admin',1);
+INSERT INTO tipoUsuario VALUES(null, 'cliente',1);
+
+INSERT INTO usuario VALUES(null, 'Matias', 'matias@gmail.com', '123',1,1);
+INSERT INTO usuario VALUES(null, 'Gaston', 'gaston@gmail.com', '123',1,2);
+INSERT INTO usuario VALUES(null, 'Esteban', 'esteban@gmail.com', '123',1,3);
+
+INSERT INTO asiento VALUES(null, 'A1',1,3);
+INSERT INTO asiento VALUES(null, 'A2',1,3);
+INSERT INTO asiento VALUES(null, 'B1',1,3);
+INSERT INTO asiento VALUES(null, 'B2',1,3);
+
+
+
+SELECT usuario.nombre, asiento.numero 
+FROM usuario
+INNER JOIN asiento ON asiento.usuario_id_fk = usuario.id
+WHERE usuario.nombre = 'Esteban'

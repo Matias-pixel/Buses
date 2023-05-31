@@ -13,31 +13,14 @@
     <!--COMIENZO DE FORMULARIO DE REGISTRO-->
 
     <div class=" d-flex justify-content-center align-items-center vh-100 mt-2" style="background-color: hsl(0, 0%, 96%)">
-        <div class="bg-white p-5 rounded-5 text-secondary shadow" style="width: 30rem">
+        <div class="bg-white p-5 rounded-5 text-secondary shadow" style="width: 30rem; border-radius: 30px;">
             <form action="/saveuser" method="POST" class="needs-validation" novalidate>
-                <h2 class="text-center">Registro</h2>
-                <p>Crea tu cuenta. Es gratis, y solo tomará un minuto.</p>
+                <h2 class="text-center">Registro de usuario</h2>
+            
                 <div class="form-group">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <b>Nombre</b><br>
-                            <input type='text' class="form-control" name="name" id="name" placeholder="Nombre" size='15'
-                                maxlength='13' required>
-                           
-
-                        </div>
-
-                        <div class="col-md-6">
-                            <b>Apellido</b><br>
-                            <input type='text' class="form-control" name="apellido" id="apellido" placeholder="Apellido" size='15' maxlength='13' required>
-                         
-                            <br>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                <b>Nombre</b><br>
+                <input type='text' class="form-control" name="name" id="name" placeholder="Nombre" size='15' maxlength='13' required>
+                <br>
                 <div class="form-group">
                     <b>Email</b><br>
                     <input type='email' name="correo" id="correo" class="form-control" placeholder="Email" size='45'

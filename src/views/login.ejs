@@ -12,10 +12,11 @@
 
     <!--FORMULARIO LOG IN-->
 
-    <div class="d-flex justify-content-center align-items-center vh-100" style="background-color: hsl(0, 0%, 96%)">
+    <div class="d-flex justify-content-center align-items-center vh-100" style="background-color: hsl(0, 0%, 96%);" >
+      <div></div>
 
         <form action="login" method="post">
-        <div class="bg-white p-5 rounded-5 text-secondary shadow" style="width: 25rem">
+        <div class="bg-white p-5 rounded-5 text-secondary shadow" style="width: 25rem; border-radius: 30px;">
             <div class="d-flex justify-content-center">
               <img src="login-icon.svg" alt="login-icon" style="height: 7rem" />
             </div>
@@ -46,5 +47,19 @@
         </form>
 
     </div>  
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <% if(typeof alert != "undefined"){ %>
+        <script>
+            Swal.fire({
+                title: '<%= alertTitle%>',
+                text: '<%= alertMessage%>',
+                icon: '<%= alertIcon%>',
+                showConfirmButton: <%= showConfirmButton%> ,
+                timer: <%= timer%>
+            }).then(()=>{
+                window.location='/<%= ruta%>'
+            })
+        </script>
+    <% } %>
 </body>
 </html>
